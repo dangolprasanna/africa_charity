@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.sec1 {
+    background-image: url(images/pic3.jpg);
+    background-size: cover;
+}
+
+.header {
+    height: 10rem;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#icon {
+    position: absolute;
+    top: 0.5rem;
+    left: 2rem;
+    width: 10vh;
+}
+
+#heading {
+    font-family: 'Staatliches', cursive;
+    font-size: 3.5rem;
+    position: absolute;
+    left: 50%;
+    top: 0.5rem;
+    transform: translate(-50%);
+}
+
+.navigation {
+    position: absolute;
+    right: 2rem;
+    top: 0.5rem;
+    z-index: 1000;
+    width: 3rem;
+    padding: 0.8rem;
+}
+
+.navigation i {
+    position: fixed;
+    font-size: 2rem;
+    color: #2D2717;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.navbar {
+    padding: 3rem 0 0 1rem;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    right: -14rem;
+    filter: blur(0.5);
+    background-color: #ACCFC9;
+    width: 13rem;
+    transition: 0.3s;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.navbar li {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    list-style: none;
+    font-size: 2rem;
+}
+
+.navbar li:hover {
+    color: #927866;
+}
+
+.quote {
+    position: relative;
+    top: 10%;
+    left: 25%;
+    /* transform: translate(-50% -50%); */
+    z-index: 1;
+    font-size: 1.2rem;
+}
+
+.sec2 {
+    background-image: url(images/pic5.jpg);
+    background-size: cover;
+}
+
+.heading {
+    font-family: 'Staatliches', cursive;
+    font-weight: bolder;
+    letter-spacing: 3px;
+}
+
+#sec2_heading {
+    font-size: 5rem;
+    margin-left: 2rem;
+    color: #6e9477;
+    display: inline;
+    text-shadow: 2px 2px rgb(15, 73, 30);
+}
+
+.sec2_container {
+    /* transform: translate(-50% -50%); */
+    height: 18rem;
+    margin: 8rem 0 0 10rem;
+    max-width: 70rem;
+    background: rgba( 255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(7, 58, 28, 0.226);
+    backdrop-filter: blur( 15.5px);
+    -webkit-backdrop-filter: blur( 15.5px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+}
+
+.sec2_icons {
+    font-size: 6rem;
+}
+
+.sec2_icons i {
+    color: #16241c;
+    margin: 0.5rem 5rem 0 5rem;
+}
+
+.icon_desc {
+    font-size: large;
+    display: flex;
+    text-align: center;
+    padding-right: 2rem;
+}
+
+.icon_desc h3 {
+    margin: 0rem 4rem 0rem 4rem;
+}
+
+.sec3 {
+    background-image: url(images/pic2.jpg);
+    background-size: cover;
+}
+
+.razorpay-payment-button.svelte-ohbfj8 {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+    width: 200px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#sec3_heading {
+    text-align: center;
+    font-size: 5rem;
+}
