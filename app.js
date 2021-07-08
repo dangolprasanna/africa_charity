@@ -7,7 +7,7 @@ nav.addEventListener('click', () => {
     if (clicks % 2 == 0) {
         nav_bar.style.transform = "translateX(-14rem)";
         nav_icon.style.transform = "rotate(90deg)"
-        section1.style.filter = "blur(2px)";
+        section1.style.filter = "blur(4px)";
     } else if (clicks % 2 != 0) {
         nav_bar.style.transform = "translateX(0rem)";
         nav_icon.style.transform = "rotate(0deg)"
@@ -27,12 +27,64 @@ gsap.from('#heading', {
 gsap.from('.quote', {
     opacity: 0,
     y: 100,
-    duration: 2,
+    duration: 1,
     delay: 1
 });
+
+ScrollTrigger.defaults({ scroller: ".container" });
+const sec2 = document.querySelector('.sec2');
 gsap.from('.sec2_container', {
-    duration: 3,
-    delay: 3,
+    scrollTrigger: {
+        trigger: sec2,
+        start: "top: 20%",
+        toggleElement: "play play play reverse",
+    },
+    duration: 1,
+    opacity: 0,
+    delay: 0.5,
+    y: 50
+})
+gsap.from('#sec2_heading', {
+    scrollTrigger: {
+        trigger: ".sec2",
+        start: "top: 20%",
+        toggleElement: "restart play play reverse",
+    },
+    duration: 1,
     opacity: 0,
     y: 50
+})
+gsap.from('#sec3_heading', {
+    scrollTrigger: {
+        trigger: ".sec3",
+        start: "top: 20%",
+        toggleElement: "restart play play reverse",
+    },
+    duration: 1,
+    opacity: 0,
+    y: -100
+})
+gsap.from('.countries', {
+    scrollTrigger: {
+        trigger: ".sec3",
+        start: "top: 20%",
+        toggleElement: "restart play play reverse",
+    },
+    delay: 0.4,
+    duration: 1,
+    opacity: 0,
+    y: 50
+})
+
+gsap.from('.donation_box', {
+    scrollTrigger: {
+        trigger: ".sec3",
+        start: "top: 20%",
+        toggleElement: "restart play play reverse",
+    },
+    delay: 1,
+    duration: 0.8,
+    opacity: 0,
+    y: 50,
+    scale: 1.5
 })
