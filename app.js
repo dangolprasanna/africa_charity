@@ -16,19 +16,22 @@ nav.addEventListener('click', () => {
     clicks++;
 });
 gsap.from('img', {
+    delay: 1,
     opacity: 0,
     duration: 2
 });
 gsap.from('#heading', {
     opacity: 0,
     y: -50,
-    duration: 1
+    duration: 1,
+    delay: 1,
+
 });
 gsap.from('.quote', {
     opacity: 0,
     y: 100,
     duration: 1,
-    delay: 1
+    delay: 2
 });
 
 ScrollTrigger.defaults({ scroller: ".container" });
@@ -37,7 +40,7 @@ gsap.from('.sec2_container', {
     scrollTrigger: {
         trigger: sec2,
         start: "top: 20%",
-        toggleElement: "play play play reverse",
+        toggleElement: "play play play repeat",
     },
     duration: 1,
     opacity: 0,
